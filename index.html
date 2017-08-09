@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>        
+    <script src="/chartist-plugin-curveddonutlables.js"></script>
+    <script src="/data/donut.data.js"></script>
+  
+    <style>   
+      
+      text.clusterNumber { 
+        font-family: 'Calibri';        
+        font-size: 10rem;
+      }
+      table td {
+        padding: 15px;
+      }
+    </style>
+  </head>
+  <body>     
+    <div id="donutCurvedLabels" class="ct-chart"></div>        
+    <div id="donutHorizontalLabels" class="ct-chart"></div>        
+    <script>        
+      var options = {
+        donut: true,
+        donutWidth: 45,
+        donutSolid: true,
+        startAngle: 0,
+        showLabel: true,
+        width: 400,
+        height: 400,         
+      };  
+
+      var curvedOptions = {
+        donut: true,
+        donutWidth: 45,
+        donutSolid: true,
+        startAngle: 0,
+        showLabel: true,
+        width: 400,
+        height: 400, 
+        plugins: [            
+          Chartist.plugins.curvedDonutLabels(),                                
+        ]          
+      };  
+
+      new Chartist.Pie("#donutHorizontalLabels", donutData, options);
+      new Chartist.Pie("#donutCurvedLabels", donutData, curvedOptions);
+    </script>
+  </body>
+</html>

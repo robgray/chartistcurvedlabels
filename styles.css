@@ -1,0 +1,22 @@
+g.ct-series {
+    stroke: white;
+    stroke-width: 1px;
+    font-family: 'Calibri';
+} 
+.green {
+    fill: #8EC449;        
+    color: white;
+}
+.red { 
+    fill: #EC433D;        
+    color: white;
+    font-size: 26px;
+}
+.orange{
+    fill: #F59331;        
+    color: white;        
+}      
+text.ct-label {
+    fill: white;
+    font-size: 0.7rem;        
+}            
